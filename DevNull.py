@@ -1,5 +1,6 @@
 import sublime, sublime_plugin
-from . import requests
+import urllib
+import json
 import webbrowser
 
 
@@ -9,7 +10,7 @@ class DevNullCommand(sublime_plugin.WindowCommand):
 
 	def get_wall(self):
 		url = "https://api.vk.com/method/wall.get?owner_id=-72495085&count=100&v=5.52"
-		self.posts = requests.get(url).json()["response"]["items"]
+		self.posts = json.loads(urllib.utlopen(url).read())["response"]["items"]
 		result = []
 		for post in self.posts:
 			if len(post["text"])<1:
