@@ -9,6 +9,8 @@ class DevNullCommand(sublime_plugin.WindowCommand):
 		self.get_wall()
 
 	def get_wall(self):
+		settings = sublime.load_settings('DevNull.sublime-settings')
+		self.owner_id = settings.get('group_id')
 		url = "https://api.vk.com/method/wall.get?owner_id=-72495085&count=100&v=5.52"
 		self.posts = json.loads(urllib.request.urlopen(url).read().decode("utf8"))["response"]["items"]
 		result = []
