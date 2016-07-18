@@ -1,0 +1,5 @@
+[
+    {
+        "keys": ["ctrl+alt+shift+d"], "command": "dev_null"
+    }
+]
