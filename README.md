@@ -9,3 +9,13 @@
   5. Опять заходим в **Package Control** и пишем _Install Package_
   6. Теперь вводим **DevNull** и жмем **ЕНТЕР**
   7. Все готово:)
+
+# Скриншоты:
+[]()
+[]()
+
+## Я в соц сетях: 
+ - [ВКонтакте](http://vk.com/gebeto)
+ - [Facebook](https://facebook.com/bboyheadman)
+ - [Instagram](https://www.instagram.com/slavik.nychkalo)
+ - [YouTube](https://www.youtube.com/channel/UCF9KTUwwy1n193oFyQylBiQ)
