@@ -11,7 +11,7 @@
   7. Все готово:)
 
 # Скриншоты:
-[]()
+![GIF](https://github.com/bboyheadman/images/blob/master/devnull/devnull.gif)
 []()
 
 ## Я в соц сетях: 
