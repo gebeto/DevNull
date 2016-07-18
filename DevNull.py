@@ -9,10 +9,10 @@ class DevNullCommand(sublime_plugin.WindowCommand):
 		self.get_wall()
 
 	def get_wall(self):
-		settings = sublime.load_settings('DevNull.sublime-settings')
-		self.owner_id = settings.get('group_id')
+		self.owner_id = "-72495085"
 		url = "https://api.vk.com/method/wall.get?owner_id=%s&count=100&v=5.52"%self.owner_id
-		self.posts = json.loads(urllib.request.urlopen(url).read().decode("utf8"))["response"]["items"]
+		resp = urllib.request.urlopen(url).read().decode("utf8")
+		self.posts = json.loads(resp)["response"]["items"]
 		result = []
 		for post in self.posts:
 			if len(post["text"])<1:
@@ -35,5 +35,7 @@ class DevNullCommand(sublime_plugin.WindowCommand):
 	def on_done(self, index):
 		#print(index)
 		#print(self.posts[index])
+		if index == -1:
+			return
 		url = "http://vk.com/tnull?w=wall%s_%s"%(self.posts[index]["owner_id"], self.posts[index]["id"])
 		webbrowser.open(url)
